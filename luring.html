@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Påskägg är gott</title>
+</head>
+<body>
+    <header class="top-header">
+        <h1>Påskägg</h1>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <button type="button" class="btn btn-warning"><a href="Index.html">CV</a></button>
+            </div>
+          </nav>
+    </header>
+      <h2>Oj oj undra vad som händer om man klickar på bilden? helt galet om man skulle göra det!</h2>
+      <h2>Eller kanske man skulle prova att skriva in 1337 helt random</h2>
+      <img src="images/komp.jpg"alt="Communicate idea in business discussion, effective communication to brainstorm and come up with solution or result concept, businessman and woman coworker talking speech bubble with lightbulb idea." onclick="ändraBakgrundsfärg()">
+
+  <script>
+  function ändraBakgrundsfärg() {
+    var färger = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
+    var slumpIndex = Math.floor(Math.random() * färger.length);
+    var body = document.getElementsByTagName("body")[0];
+    body.style.backgroundColor = färger[slumpIndex];
+  }
+    </script>
+    <div id="myModal" class="modal" style="display: none;" >
+         <!-- Modal content -->
+       <div class="modal-content">
+         <span class="close">x</span>
+         <p>Men dra mig här händer det magi! &#x1F929;</p>
+    </div>
+        
+      </div>
+      <script>      
+         // Skapa en array för att hålla koden för kombinationen "1337"
+         var kod = [];
+        // Lägg till en event-lyssnare för tangentbordstryckningar
+        document.addEventListener('keydown', function(event) {
+          
+            // Lägg till det senaste tryckta tecknet i koden
+          kod.push(event.key);
+          
+          // Kontrollera om koden matchar kombinationen "1337"
+          if (kod.join('').includes('1337')) {
+            // Visa modal popup med roligt meddelande
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+            
+            // Rensa koden efter användning
+            kod = []; 
+          } 
+           // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+               modal.style.display = "none";
+            }
+        });
+      </script>
+      <footer>
+        <h4 class="copyright">Copyright &copy Malin Lindblom 2023</h4>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

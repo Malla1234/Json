@@ -1,0 +1,43 @@
+
+.top-header{
+    background-color: #38877a;
+    justify-content: center;
+    text-align: center;
+    padding: 1px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.copyright{
+    background-color: #38877a;
+    justify-content: center;
+    text-align: center;
+    padding: 1px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-fluid{
+    background-color: #38877a;
+    justify-content: center;
+    text-align: center;
+    padding: 1px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.navbar-brand{
+    font-family:'Playfair Display', serif;
+    text-decoration: none;
+}
+.modal-content{
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 2px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
